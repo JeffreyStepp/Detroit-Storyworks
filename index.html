@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Detroit Storyworks connects visitors with Detroit history, music, architecture, and community stories.">
+  <title>Detroit Storyworks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="home">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Detroit Storyworks home">
+        <span class="brand-badge" aria-hidden="true">DS</span>
+        <span>Detroit Storyworks</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experiences">Experiences</a></li>
+          <li><a href="#discover">Discover</a></li>
+          <li><a href="#visit">Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">People. Places. Sound. Industry.</p>
+          <h1>Every block has a story.</h1>
+          <p class="hero-copy">Detroit Storyworks creates tours and experiences that connect visitors with the people, places, industries, and creative movements that shaped Detroit.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#experiences">Explore Experiences</a>
+            <a class="btn btn-secondary" href="#discover">Discover Detroit</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="stamp">313</div>
+          <div class="line line-one"></div>
+          <div class="line line-two"></div>
+          <div class="line line-three"></div>
+          <p>MOTOR CITY<br>STORY CITY</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">About Detroit Storyworks</p>
+          <h2>Detroit is bigger than one landmark or one era.</h2>
+        </div>
+        <p>Detroit Storyworks connects visitors with different parts of the city through stories, places, objects, art, music, engineering, and shared experiences. Our goal is to make local history feel active, current, and connected to the Detroit people know today.</p>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="experiences">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Experiences</p>
+            <h2>Choose your Detroit.</h2>
+          </div>
+          <div class="filters" aria-label="Filter experiences by category">
+            <button class="filter-btn active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="history">History</button>
+            <button class="filter-btn" type="button" data-filter="music">Music</button>
+            <button class="filter-btn" type="button" data-filter="architecture">Architecture</button>
+            <button class="filter-btn" type="button" data-filter="culture">Culture</button>
+          </div>
+        </div>
+
+        <div class="card-grid" id="experience-grid">
+          <article class="experience-card" data-category="history">
+            <p class="card-number">01 / HISTORY</p>
+            <h3>Assembly Line Detroit</h3>
+            <p>Trace the factories, labor, engineering, and ideas that helped put the world on wheels.</p>
+            <ul class="details"><li>2 hours</li><li>Thursdays & Saturdays</li><li>$34</li></ul>
+          </article>
+
+          <article class="experience-card" data-category="music">
+            <p class="card-number">02 / MUSIC</p>
+            <h3>From Motown to Techno</h3>
+            <p>Explore the neighborhoods, clubs, studios, and artists behind two globally influential Detroit sounds.</p>
+            <ul class="details"><li>90 minutes</li><li>Friday evenings</li><li>$28</li></ul>
+          </article>
+
+          <article class="experience-card" data-category="architecture">
+            <p class="card-number">03 / ARCHITECTURE</p>
+            <h3>Built in Detroit</h3>
+            <p>A walking route through downtown details, Art Deco landmarks, industrial forms, and adaptive reuse.</p>
+            <ul class="details"><li>2.5 hours</li><li>Weekend mornings</li><li>$32</li></ul>
+          </article>
+
+          <article class="experience-card" data-category="culture">
+            <p class="card-number">04 / CULTURE</p>
+            <h3>Murals & Market Stories</h3>
+            <p>Meet Detroit through public art, Eastern Market, neighborhood traditions, and contemporary makers.</p>
+            <ul class="details"><li>2 hours</li><li>Sundays</li><li>$30</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section discovery" id="discover">
+      <div class="container discovery-grid">
+        <div>
+          <p class="eyebrow">API-powered Detroit discovery</p>
+          <h2>Look up a Detroit story.</h2>
+          <p>Search a Detroit landmark, musician, neighborhood, invention, or cultural movement. Detroit Storyworks will request a short live summary from Wikipedia.</p>
+          <form id="discovery-form" class="search-form">
+            <label for="discovery-input">What would you like to discover?</label>
+            <div class="search-row">
+              <input id="discovery-input" name="discovery" type="search" placeholder="Try Motown or Guardian Building" required>
+              <button class="btn btn-primary" type="submit">Discover</button>
+            </div>
+          </form>
+          <div class="quick-searches" aria-label="Suggested searches">
+            <button type="button" class="quick-btn" data-query="Motown">Motown</button>
+            <button type="button" class="quick-btn" data-query="Detroit techno">Detroit techno</button>
+            <button type="button" class="quick-btn" data-query="Guardian Building Detroit">Guardian Building</button>
+            <button type="button" class="quick-btn" data-query="Eastern Market Detroit">Eastern Market</button>
+          </div>
+        </div>
+
+        <div id="api-result" class="api-result" aria-live="polite">
+          <p class="result-label">DISCOVERY READY</p>
+          <h3>Start with a Detroit subject.</h3>
+          <p>Enter a search above or choose one of the suggested topics.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-accent">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Why stories matter</p>
+          <h2>The city is still being written.</h2>
+        </div>
+        <p>History is not only something behind glass. Detroit's music, manufacturing, neighborhoods, art, food, sports, and riverfront continue to change. Our experiences connect the past with what visitors can see and hear around them now.</p>
+      </div>
+    </section>
+
+    <section class="section" id="visit">
+      <div class="container visit-grid">
+        <div>
+          <p class="eyebrow">Visit / Contact</p>
+          <h2>Plan your next Detroit story.</h2>
+          <address>
+            <strong>Detroit Storyworks</strong><br>
+            1420 Rivet Street<br>
+            Detroit, MI 48201<br><br>
+            <a href="tel:3135550148">313-555-0148</a><br>
+            <a href="mailto:hello@detroitstoryworks.example">hello@detroitstoryworks.example</a>
+          </address>
+          <div class="hours">
+            <p><strong>Mon–Thu:</strong> 10:00 AM–6:00 PM</p>
+            <p><strong>Fri–Sat:</strong> 10:00 AM–8:00 PM</p>
+            <p><strong>Sunday:</strong> 11:00 AM–5:00 PM</p>
+          </div>
+        </div>
+
+        <form id="inquiry-form" class="inquiry-form" novalidate>
+          <h3>Request information</h3>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message or question</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send Request</button>
+          <p id="form-message" class="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>Detroit Storyworks — fictional classroom client project.</p>
+      <p>Discovery data provided by Wikipedia / MediaWiki.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
